@@ -1,0 +1,23 @@
+/*
+Q73 (2D Arrays)
+Find the sum of each row of a matrix and store it in an array*/
+
+#include <stdio.h>
+
+int main() {
+    int matrix[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+    int sums[3] = {0};
+
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            sums[i] += matrix[i][j];
+        }
+    }
+
+    printf("Sums of each row:\n");
+    for (int i = 0; i < 3; i++) {
+        printf("Row %d: %d\n", i, sums[i]);
+    }
+
+    return 0;
+}
